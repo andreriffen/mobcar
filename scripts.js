@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
 // Navigation and Layout
 // -----------------------------------------------------------------------------
 function initMobileMenu() {
-    const toggle = document.querySelector('.mobile-menu-toggle');
-    const nav = document.querySelector('.mobile-nav');
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.primary-nav__drawer');
     if (!toggle || !nav) return;
 
     toggle.addEventListener('click', () => {
@@ -67,39 +67,51 @@ function initHeaderState() {
 
 function initActiveMenuHighlight() {
     const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-links a, .mobile-nav a');
+    const navLinks = document.querySelectorAll('.primary-nav__links a, .primary-nav__drawer a');
     if (!sections.length || !navLinks.length) return;
 
-    const setActiveLink = () => {
-        const scrollPos = window.pageYOffset + 100;
-        let currentSection = '';
-
-        sections.forEach(section => {
-            const top = section.offsetTop;
-            const height = section.offsetHeight;
-            if (scrollPos >= top && scrollPos < top + height) {
-                currentSection = section.getAttribute('id');
-            }
-        });
-
+    const highlightLink = targetId => {
         navLinks.forEach(link => {
-            if (link.getAttribute('href') === `#${currentSection}`) {
-                link.classList.add('active');
-            } else {
-                link.classList.remove('active');
-            }
+            const href = link.getAttribute('href');
+            const isMatch = href && href.startsWith('#') && href === `#${targetId}`;
+            link.classList.toggle('active', Boolean(isMatch));
         });
     };
 
-    window.addEventListener('scroll', setActiveLink);
+    const setActiveLink = () => {
+        let currentSection = sections[0]?.id || '';
+        const referenceLine = 140;
+
+        sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top <= referenceLine && rect.bottom >= referenceLine) {
+                currentSection = section.id;
+            }
+        });
+
+        if (currentSection) {
+            highlightLink(currentSection);
+        }
+    };
+
+    window.addEventListener('scroll', setActiveLink, { passive: true });
     setActiveLink();
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            const href = link.getAttribute('href');
+            if (!href || !href.startsWith('#')) return;
+            const targetId = href.slice(1);
+            if (targetId) highlightLink(targetId);
+        });
+    });
 }
 
 // -----------------------------------------------------------------------------
 // Visual Effects
 // -----------------------------------------------------------------------------
 function initParallaxShapes() {
-    const shapes = document.querySelectorAll('.shape');
+    const shapes = document.querySelectorAll('.ornament');
     if (!shapes.length) return;
 
     window.addEventListener('scroll', () => {
@@ -112,7 +124,7 @@ function initParallaxShapes() {
 }
 
 function initNeuralLinesPulse() {
-    const lines = document.querySelectorAll('.neural-line');
+    const lines = document.querySelectorAll('.accent-line');
     if (!lines.length) return;
 
     setInterval(() => {
@@ -213,7 +225,7 @@ function initDefaultFormButtons() {
 
 function initMobcarForm() {
     const intentInput = document.getElementById('intent');
-    const intentButtons = document.querySelectorAll('.intent-button');
+    const intentButtons = document.querySelectorAll('.intent-toggle');
     const customerName = document.getElementById('customer_name');
     if (!intentInput || !intentButtons.length || !customerName) return;
 
@@ -260,7 +272,7 @@ function initMobcarForm() {
     };
 
     const attachIntegerMoneyMask = () => {
-        document.querySelectorAll('.money-input').forEach(el => {
+        document.querySelectorAll('.currency-input').forEach(el => {
             el.addEventListener('input', () => formatMoneyIntegerInput(el));
             el.addEventListener('focus', () => {
                 try {
@@ -321,9 +333,9 @@ function initMobcarForm() {
 
     const updateVisibility = () => {
         const value = currentIntent;
-        sellBlock?.classList.toggle('d-none', value !== 'vender');
-        buyBlock?.classList.toggle('d-none', value !== 'comprar');
-        rentBlock?.classList.toggle('d-none', value !== 'alugar');
+        sellBlock?.classList.toggle('is-hidden', value !== 'vender');
+        buyBlock?.classList.toggle('is-hidden', value !== 'comprar');
+        rentBlock?.classList.toggle('is-hidden', value !== 'alugar');
     };
 
     const validateName = () => {

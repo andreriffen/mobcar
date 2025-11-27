@@ -22,28 +22,28 @@
 <body>
 
     <!-- Background -->
-    <div class="neural-background"></div>
+    <div class="dealership-backdrop"></div>
 
-    <!-- Floating Geometric Shapes -->
-    <div class="geometric-shapes">
-        <div class="shape"></div>
-        <div class="shape"></div>
-        <div class="shape"></div>
-        <div class="shape"></div>
+    <!-- Floating Ornaments -->
+    <div class="floating-ornaments">
+        <div class="ornament"></div>
+        <div class="ornament"></div>
+        <div class="ornament"></div>
+        <div class="ornament"></div>
     </div>
 
-    <!-- Animated Lines -->
-    <div class="neural-lines">
-        <div class="neural-line"></div>
-        <div class="neural-line"></div>
-        <div class="neural-line"></div>
+    <!-- Accent Lines -->
+    <div class="accent-lines">
+        <div class="accent-line"></div>
+        <div class="accent-line"></div>
+        <div class="accent-line"></div>
     </div>
 
     <!-- Header -->
-    <header class="glass">
-        <nav>
-            <a href="#home" class="logo">
-                <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <header class="primary-header u-glass-panel">
+        <nav class="primary-nav">
+            <a href="#inicio" class="brand-mark">
+                <svg class="brand-mark__icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                     <defs>
                         <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                             <stop offset="0%" style="stop-color:#e0a3ff" />
@@ -72,161 +72,196 @@
                 </svg>
                 MOBCAR
             </a>
-            <ul class="nav-links">
-                <li><a href="#features">Neural</a></li>
-                <li><a href="#showcase">Matrix</a></li>
-                <li><a href="#timeline">Evolution</a></li>
-                <li><a href="#contact">Connect</a></li>
+            <ul class="primary-nav__links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#solucoes">Soluções</a></li>
+                <li><a href="#lead">Simule Atendimento</a></li>
+                <li><a href="#contato">Contato</a></li>
                 <li><a href="https://example.com" target="_blank" class="external-link">External</a></li>
             </ul>
-            </ul>
-            <div class="mobile-menu-toggle">
-                <div class="hamburger-line"></div>
-                <div class="hamburger-line"></div>
-                <div class="hamburger-line"></div>
+            <div class="nav-toggle">
+                <div class="nav-toggle__bar"></div>
+                <div class="nav-toggle__bar"></div>
+                <div class="nav-toggle__bar"></div>
             </div>
         </nav>
-        <div class="mobile-nav">
-            <a href="#features">Neural</a>
-            <a href="#showcase">Matrix</a>
-            <a href="#timeline">Evolution</a>
-            <a href="#contact">Connect</a>
+        <div class="primary-nav__drawer">
+            <a href="#inicio">Início</a>
+            <a href="#solucoes">Soluções</a>
+            <a href="#lead">Simule Atendimento</a>
+            <a href="#contato">Contato</a>
             <a href="https://example.com" target="_blank" class="external-link">External</a>
         </div>
     </header>
 
-    <!-- Section 1: Hero Custom -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <div class="hero-subtitle">Compre, Venda ou Alugue</div>
+    <!-- Section 1: Hero -->
+    <section class="hero-section" id="inicio">
+        <div class="hero-section__content">
+            <div class="hero-section__eyebrow">Compre, Venda ou Alugue</div>
             <h1>Aqui você tem flexibilidade</h1>
 
-            <div class="hero-description">
+            <div class="hero-section__description">
                 <p>Encontre o carro ideal para você com nosso suporte especializado em compra, venda e aluguel de
                     veículos. </p>
                 <p>Flexibilidade e confiança em cada negociação. <br> Para cada necessidade, uma solução.</p>
                 <p>Dinheiro na mão e sua garantia de satisfação.</p>
             </div>
 
-            <div class="hero-stats">
-                <div class="hero-stat">
-                    <span class="hero-stat-number">100%</span>
-                    <span class="hero-stat-label">Satisfação Garantida</span>
+            <div class="hero-metrics">
+                <div class="hero-metrics__item">
+                    <span class="hero-metrics__value">100%</span>
+                    <span class="hero-metrics__label">Satisfação Garantida</span>
                 </div>
-                <div class="hero-stat">
-                    <span class="hero-stat-number">360°</span>
-                    <span class="hero-stat-label">Soluções Flexíveis</span>
+                <div class="hero-metrics__item">
+                    <span class="hero-metrics__value">360°</span>
+                    <span class="hero-metrics__label">Soluções Flexíveis</span>
                 </div>
-                <div class="hero-stat">
-                    <span class="hero-stat-number">24/7</span>
-                    <span class="hero-stat-label">Suporte Especializado</span>
+                <div class="hero-metrics__item">
+                    <span class="hero-metrics__value">24/7</span>
+                    <span class="hero-metrics__label">Suporte Especializado</span>
                 </div>
             </div>
 
-            <div class="cta-buttons">
+            <div class="hero-actions">
                 <a href="https://api.whatsapp.com/send?phone=554896968661&text=" target="_blank"
-                    class="cta-button">WhatsApp</a>
-                <a href="#contato" class="cta-button secondary">↓ Saber mais ↓</a>
+                    class="action-button">WhatsApp</a>
+                <a href="#solucoes" class="action-button action-button--ghost">↓ Saber mais ↓</a>
             </div>
+        </div>
     </section>
 
-    <!-- Section 2: Mobcar Interface -->
-    <section class="mobcar-interface" id="contato">
-        <br><br><br>
-        <h2 class="section-title">RETOME O CONTROLE FINANCEIRO</h2>
-        <div class="mobcar-interface-container">
-            <div class="interface-form glass hero-form-card">
-                <form id="mobcarForm" class="mobcar-form">
+    <!-- Section 2: Services Grid -->
+    <section class="services-section" id="solucoes">
+        <div class="services-section__container">
+            <h2 class="section-heading">O QUE A <b class="gradient-color">MOBCAR</b> PODE FAZER POR VOCÊ?</h2>
+            <div class="service-grid">
+                <div class="service-row">
+                    <div class="service-card u-glass-panel">
+                        <div class="service-card__icon">💲</div>
+                        <h3>Compra</h3>
+                        <p>A <b>Mobcar</b> facilita a compra do seu veículo ideal com praticidade e atendimento personalizado. O pix cai na hora! <br>Resolva seu problema rapidamente.</p>
+                        <p>A melhor valorização do seu usado você encontra aqui.</p>
+                    </div>
+                    <div class="service-visual u-glass-panel"></div>
+                </div>
 
-                    <div class="intent-buttons" role="tablist">
-                        <button type="button" class="intent-button active" data-intent="comprar">Compra</button>
-                        <button type="button" class="intent-button" data-intent="vender">Venda</button>
-                        <button type="button" class="intent-button" data-intent="alugar">Aluguel</button>
+                <div class="service-row">
+                    <div class="service-card u-glass-panel">
+                        <div class="service-card__icon">⚡</div>
+                        <h3>Venda</h3>
+                        <p>Oferecemos uma meio seguro e eficiente para vender seu veículo, conectando você a compradores qualificados e garantindo uma transação rápida e transparente.</p>
+                    </div>
+                    <div class="service-visual u-glass-panel"></div>
+                </div>
+
+                <div class="service-row">
+                    <div class="service-card u-glass-panel">
+                        <div class="service-card__icon">🌐</div>
+                        <h3>Aluguel</h3>
+                        <p>Aqui você pode alugar veículos de forma rápida e segura, com opções flexíveis para atender às suas necessidades. Utilidade garantida para todas as ocasiões.</p>
+                    </div>
+                    <div class="service-visual u-glass-panel"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Lead Capture -->
+    <section class="lead-capture" id="lead">
+        <h2 class="section-heading">RETOME O CONTROLE FINANCEIRO</h2>
+        <div class="lead-capture__container">
+            <div class="lead-capture__card u-glass-panel">
+                <form id="leadForm" class="lead-form">
+
+                    <div class="lead-form__intent-switch" role="tablist">
+                        <button type="button" class="intent-toggle active" data-intent="comprar">Compra</button>
+                        <button type="button" class="intent-toggle" data-intent="vender">Venda</button>
+                        <button type="button" class="intent-toggle" data-intent="alugar">Aluguel</button>
                     </div>
 
                     <input type="hidden" id="intent" value="comprar">
 
-                    <div class="mobcar-field">
-                        <label class="mobcar-chip">
+                    <div class="form-field">
+                        <label class="field-label">
                             <i class="fas fa-user"></i>
                             <span>Nome</span>
                         </label>
-                        <input id="customer_name" maxlength="30" class="mobcar-input" type="text" placeholder="Seu nome"
+                        <input id="customer_name" maxlength="30" class="form-input" type="text" placeholder="Seu nome"
                             required>
                     </div>
 
-                    <div id="sell-block" class="mobcar-field-group d-none">
-                        <div class="mobcar-field">
-                            <label class="mobcar-chip">
+                    <div id="sell-block" class="form-field-group is-hidden">
+                        <div class="form-field">
+                            <label class="field-label">
                                 <i class="fas fa-car"></i>
                                 <span>Veículo</span>
                             </label>
-                            <input id="sell-vehicle" maxlength="50" class="mobcar-input" type="text"
+                            <input id="sell-vehicle" maxlength="50" class="form-input" type="text"
                                 placeholder="Ex: Fiat Uno 2005">
                         </div>
 
-                        <div class="mobcar-grid">
-                            <div class="mobcar-field">
-                                <label class="mobcar-chip">
+                        <div class="form-field-grid">
+                            <div class="form-field">
+                                <label class="field-label">
                                     <i class="fas fa-calendar"></i>
                                     <span>Ano</span>
                                 </label>
-                                <input id="sell-year" maxlength="4" class="mobcar-input" type="number"
+                                <input id="sell-year" maxlength="4" class="form-input" type="number"
                                     inputmode="numeric" placeholder="2010" max="2027">
                             </div>
 
-                            <div class="mobcar-field">
-                                <label class="mobcar-chip">
+                            <div class="form-field">
+                                <label class="field-label">
                                     <span>FIPE (R$)</span>
                                 </label>
-                                <input id="sell-fipe" class="mobcar-input money-input" type="text" placeholder="0">
+                                <input id="sell-fipe" class="form-input currency-input" type="text" placeholder="0">
                             </div>
                         </div>
 
-                        <div class="mobcar-field">
-                            <label class="mobcar-chip">
+                        <div class="form-field">
+                            <label class="field-label">
                                 <span>Pretensão (R$)</span>
                             </label>
-                            <input id="sell-price" class="mobcar-input money-input" type="text" placeholder="0">
+                            <input id="sell-price" class="form-input currency-input" type="text" placeholder="0">
                         </div>
                     </div>
 
-                    <div id="buy-block" class="mobcar-field-group">
-                        <div class="mobcar-field">
-                            <label class="mobcar-chip">
+                    <div id="buy-block" class="form-field-group">
+                        <div class="form-field">
+                            <label class="field-label">
                                 <i class="fas fa-search"></i>
                                 <span>Procurando</span>
                             </label>
-                            <input id="buy-interest" class="mobcar-input" type="text"
+                            <input id="buy-interest" class="form-input" type="text"
                                 placeholder="Ex: Sedan, econômico, até 40 mil">
                         </div>
                     </div>
 
-                    <div id="rent-block" class="mobcar-field-group d-none">
-                        <div class="mobcar-field">
-                            <label class="mobcar-chip">
+                    <div id="rent-block" class="form-field-group is-hidden">
+                        <div class="form-field">
+                            <label class="field-label">
                                 <i class="fas fa-car-side"></i>
                                 <span>Modelo</span>
                             </label>
-                            <input id="rent-vehicle" class="mobcar-input" type="text" placeholder="Opcional">
+                            <input id="rent-vehicle" class="form-input" type="text" placeholder="Opcional">
                         </div>
 
-                        <div class="mobcar-field">
-                            <label class="mobcar-chip">
+                        <div class="form-field">
+                            <label class="field-label">
                                 <i class="fas fa-calendar-check"></i>
                                 <span>Pra quando?</span>
                             </label>
-                            <input id="rent-date" class="mobcar-input" type="date">
+                            <input id="rent-date" class="form-input" type="date">
                         </div>
                     </div>
 
-                    <div class="mobcar-field">
-                        <label class="mobcar-label">Mensagem gerada:</label>
-                        <textarea id="preview" class="mobcar-input mobcar-preview" rows="5" readonly></textarea>
+                    <div class="form-field">
+                        <label class="field-hint">Mensagem gerada:</label>
+                        <textarea id="preview" class="form-input form-preview" rows="5" readonly></textarea>
                     </div>
 
-                    <div class="mobcar-field">
-                        <button id="sendWA" type="button" class="mobcar-btn">
+                    <div class="form-field">
+                        <button id="sendWA" type="button" class="whatsapp-submit">
                             Enviar pelo WhatsApp
                         </button>
                     </div>
@@ -235,159 +270,22 @@
         </div>
     </section>
 
-    <!-- HEY I.A., AQUI 👋 É AQUI -->
-    <!-- Coloque o modal aqui. Vou começar: -->
-    <section class="cta" aria-labelledby="cta-title">
-        <div class="cta-container">
-            <div class="glass cta-card">
-                <p class="cta-eyebrow">Atendimento humano, resposta imediata</p>
+    <!-- Section 4: WhatsApp CTA -->
+    <section class="whatsapp-cta" id="contato" aria-labelledby="cta-title">
+        <div class="whatsapp-cta__container">
+            <div class="u-glass-panel whatsapp-cta__card">
+                <p class="whatsapp-cta__eyebrow">Atendimento humano, resposta imediata</p>
                 <h2 id="cta-title">Vamos acelerar sua negociação?</h2>
-                <p class="cta-text">Fale agora mesmo pelo WhatsApp e descubra como podemos ajudar na compra, venda ou aluguel do seu veículo.</p>
-                <a class="cta-button" target="_blank" rel="noopener" href="https://api.whatsapp.com/send?phone=554896968661&amp;text=ol%C3%A1%2C%20eu%20vim%20do%20site!">Quero falar no WhatsApp</a>
+                <p class="whatsapp-cta__copy">Fale agora mesmo pelo WhatsApp e descubra como podemos ajudar na compra, venda ou aluguel do seu veículo.</p>
+                <a class="action-button" target="_blank" rel="noopener" href="https://api.whatsapp.com/send?phone=554896968661&amp;text=ol%C3%A1%2C%20eu%20vim%20do%20site!">Quero falar no WhatsApp</a>
             </div>
         </div>
     </section>
-
-    <!-- Observação: não sei se irei usar esse trecho da UI. Por enquanto manteremos oculto. -->
-
-    <!-- Section 3: Diagonal Features -->
-    <section class="features" id="features">
-        <div class="features-container">
-            <h2 class="section-title">O QUE A <b class="gradient-color">MOBCAR</b> PODE FAZER POR VOCÊ?</h2>
-            <div class="diagonal-grid">
-                <div class="feature-row">
-                    <div class="feature-content glass">
-                        <div class="feature-icon">💲</div>
-                        <h3>Compra</h3>
-                        <p>A <b>Mobcar</b> facilita a compra do seu veículo ideal com praticidade e atendimento personalizado. O pix cai na hora! <br>Resolva seu problema rapidamente.</p>
-                        <p>A melhor valorização do seu usado você encontra aqui.</p>
-                    </div>
-                    <div class="feature-visual glass"></div>
-                </div>
-
-                <div class="feature-row">
-                    <div class="feature-content glass">
-                        <div class="feature-icon">⚡</div>
-                        <h3>Venda</h3>
-                        <p>Oferecemos uma meio seguro e eficiente para vender seu veículo, conectando você a compradores qualificados e garantindo uma transação rápida e transparente.</p>
-                    </div>
-                    <div class="feature-visual glass"></div>
-                </div>
-
-                <div class="feature-row">
-                    <div class="feature-content glass">
-                        <div class="feature-icon">🌐</div>
-                        <h3>Aluguel</h3>
-                        <p>Aqui você pode alugar veículos de forma rápida e segura, com opções flexíveis para atender às suas necessidades. Utilidade garantida para todas as ocasiões.</p>
-                    </div>
-                    <div class="feature-visual glass"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 4: Hexagonal Showcase -->
-    <!-- <section class="showcase" id="showcase">
-        <h2 class="section-title">MATRIX PROTOCOLS</h2>
-        <div class="hexagon-container">
-            <div class="hexagon">
-                <div class="hexagon-inner glass">
-                    <div class="hexagon-icon">🔮</div>
-                    <h4>Holographic UI</h4>
-                    <p>3D interfaces projected into reality space</p>
-                </div>
-            </div>
-            <div class="hexagon">
-                <div class="hexagon-inner glass">
-                    <div class="hexagon-icon">🛡️</div>
-                    <h4>Quantum Security</h4>
-                    <p>Unbreakable encryption protocols</p>
-                </div>
-            </div>
-            <div class="hexagon">
-                <div class="hexagon-inner glass">
-                    <div class="hexagon-icon">🚀</div>
-                    <h4>Warp Navigation</h4>
-                    <p>Instant travel between data nodes</p>
-                </div>
-            </div>
-            <div class="hexagon">
-                <div class="hexagon-inner glass">
-                    <div class="hexagon-icon">💎</div>
-                    <h4>Crystal Storage</h4>
-                    <p>Infinite capacity data crystals</p>
-                </div>
-            </div>
-            <div class="hexagon">
-                <div class="hexagon-inner glass">
-                    <div class="hexagon-icon">🎯</div>
-                    <h4>Neural Targeting</h4>
-                    <p>Thought-based interaction systems</p>
-                </div>
-            </div>
-            <div class="hexagon">
-                <div class="hexagon-inner glass">
-                    <div class="hexagon-icon">⭐</div>
-                    <h4>Stellar Network</h4>
-                    <p>Galactic-scale connectivity matrix</p>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- Section 5: Timeline -->
-    <!-- <section class="timeline" id="timeline">
-        <h2 class="section-title">EVOLUTION TIMELINE</h2>
-        <div class="timeline-container">
-            <div class="timeline-line"></div>
-
-            <div class="timeline-item">
-                <div class="timeline-content glass">
-                    <div class="timeline-year">2024</div>
-                    <h4>Genesis Protocol</h4>
-                    <p>NeuralGlass is a cutting-edge cyberpunk glassmorphism HTML template featuring a striking purple,
-                        pink, and green color palette with futuristic neural network aesthetics.</p>
-                </div>
-                <div class="timeline-dot"></div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-content glass">
-                    <div class="timeline-year">2025</div>
-                    <h4>Matrix Integration</h4>
-                    <p>Built with pure HTML/CSS and vanilla JavaScript, it offers smooth scrolling, mobile-responsive
-                        navigation with hamburger menu, parallax effects, and dynamic visual elements that respond to
-                        user interaction.</p>
-                </div>
-                <div class="timeline-dot"></div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-content glass">
-                    <div class="timeline-year">2026</div>
-                    <h4>Quantum Leap</h4>
-                    <p>This HTML CSS template is brought to you by TemplateMo website. Perfect for tech startups, AI
-                        companies, gaming platforms, or any project requiring a bold, futuristic web presence.</p>
-                </div>
-                <div class="timeline-dot"></div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-content glass">
-                    <div class="timeline-year">2027</div>
-                    <h4>Neural Singularity</h4>
-                    <p>Human consciousness successfully merges with AI systems, creating hybrid intelligences that
-                        transcend biological limitations.</p>
-                </div>
-                <div class="timeline-dot"></div>
-            </div>
-        </div>
-    </section> -->
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-links">
+    <footer class="site-footer">
+        <div class="site-footer__content">
+            <div class="site-footer__links">
                 <a href="#">Compra</a>
                 <a href="#">Venda</a>
                 <a href="#">Aluguel</a>
@@ -401,7 +299,7 @@
             <div class="footer-copyright">
                 <p>&copy; 2026 Mobcar. Todos os direitos reservados.</p>
             </div>
-            <div class="footer-design">
+            <div class="site-footer__credit">
                 Mobcar &copy; | Uma empresa do grupo
                 <a href="https://assessoriafacilita.com">Facilita</a>
                 Desenvolvido por: <a href="https://andreriffen.github.io/resume" target="_blank"
