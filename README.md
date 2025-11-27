@@ -36,12 +36,6 @@ scripts.js
 
 Tudo isso rodando assim que o `DOMContentLoaded` respira.
 
-## Como rodar localmente
-
-1. Clone o repo.
-2. Abra `index.html` no navegador.
-3. Prenda a respiração quando o herói carregar.
-
 Se quiser deixar o form funcionando, ajuste os links do WhatsApp e finge que tem backend.
 
 ## SEO / Schema
@@ -57,4 +51,10 @@ Metemos um bloco `AutoDealer` no `<head>` com CNPJ, endereço na ACATE, horário
 
 ## Licença
 
-Não tem. Se for copiar, pelo menos troca as cores pra não ficar tão óbvio. 😉
+Não tem. Se for copiar, faça algo de decente. Se for copiar, copia direito.
+
+## Author
+
+Eu, Andre Riffen
+
+> With great powers, comes great reponsability. 🕸️
