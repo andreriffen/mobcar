@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollObserver();
     initDefaultFormButtons();
     initMobcarForm();
+    initSiteModals();
 });
 
 // -----------------------------------------------------------------------------
@@ -486,5 +487,73 @@ function initMobcarForm() {
     customerName.addEventListener('input', () => {
         if (nameSaveTimer) clearTimeout(nameSaveTimer);
         nameSaveTimer = setTimeout(saveName, 700);
+    });
+}
+
+function initSiteModals() {
+    const triggers = document.querySelectorAll('[data-modal]');
+    if (!triggers.length) return;
+
+    const controllers = new Map();
+    let activeCloser = null;
+
+    const createController = modal => {
+        const closeBtn = modal.querySelector('.site-modal__close');
+        const backdrop = modal.querySelector('.site-modal__backdrop');
+        let lastFocusedElement = null;
+
+        const updateAria = isVisible => modal.setAttribute('aria-hidden', isVisible ? 'false' : 'true');
+
+        const closeModal = () => {
+            if (!modal.classList.contains('is-open')) return;
+            modal.classList.remove('is-open');
+            document.body.classList.remove('modal-open');
+            updateAria(false);
+            modal.setAttribute('hidden', '');
+            if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+                lastFocusedElement.focus();
+            }
+            if (activeCloser === closeModal) {
+                activeCloser = null;
+            }
+        };
+
+        const openModal = event => {
+            if (event) event.preventDefault();
+            if (typeof activeCloser === 'function') {
+                activeCloser();
+            }
+            lastFocusedElement = document.activeElement;
+            modal.removeAttribute('hidden');
+            modal.classList.add('is-open');
+            document.body.classList.add('modal-open');
+            updateAria(true);
+            closeBtn?.focus();
+            activeCloser = closeModal;
+        };
+
+        closeBtn?.addEventListener('click', closeModal);
+        backdrop?.addEventListener('click', closeModal);
+
+        return { open: openModal, close: closeModal };
+    };
+
+    triggers.forEach(trigger => {
+        const targetId = trigger.dataset.modal;
+        if (!targetId) return;
+        const modal = document.getElementById(targetId);
+        if (!modal) return;
+        if (!controllers.has(modal)) {
+            controllers.set(modal, createController(modal));
+        }
+        const controller = controllers.get(modal);
+        trigger.addEventListener('click', controller.open);
+    });
+
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && typeof activeCloser === 'function') {
+            event.preventDefault();
+            activeCloser();
+        }
     });
 }

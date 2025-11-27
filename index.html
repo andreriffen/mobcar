@@ -17,6 +17,99 @@
     <style>
 
     </style>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "AutoDealer",
+            "@id": "https://mobcarveiculos.com/#organization",
+            "url": "https://mobcarveiculos.com",
+            "name": "Mobcar",
+            "legalName": "MOBCAR VEICULOS LTDA",
+            "foundingDate": "2024-05-08",
+            "taxID": "55.055.273/0001-25",
+            "description": "Compra, venda e locação de veículos com suporte financeiro integrado ao ecossistema Assessoria Facilita.",
+            "telephone": "+554896968661",
+            "email": "mobcar@mobcarveiculos.com",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Av. Luiz Boiteux Piazza, 1302, Sala 13, Edif. ACATE - Sapiens Parque",
+                "addressLocality": "Florianópolis",
+                "addressRegion": "SC",
+                "postalCode": "88056-000",
+                "addressCountry": "BR"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": -27.4333,
+                "longitude": -48.5003
+            },
+            "openingHoursSpecification": [
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": [
+                        "Monday",
+                        "Tuesday",
+                        "Wednesday",
+                        "Thursday",
+                        "Friday"
+                    ],
+                    "opens": "08:00",
+                    "closes": "18:00"
+                }
+            ],
+            "areaServed": "Brasil",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "customer service",
+                "telephone": "+554896968661",
+                "email": "mobcar@mobcarveiculos.com",
+                "availableLanguage": ["pt-BR"]
+            },
+            "parentOrganization": {
+                "@type": "Organization",
+                "name": "Assessoria Facilita",
+                "url": "https://assessoriafacilita.com"
+            },
+            "makesOffer": {
+                "@type": "OfferCatalog",
+                "name": "Soluções Mobcar",
+                "itemListElement": [
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Compra de veículos com financiamento",
+                            "serviceType": "Aquisição imediata de carros financiados ou com restrições"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Venda assistida de seminovos",
+                            "serviceType": "Curadoria e comercialização com assessoria financeira"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Locação de automóveis sem condutor",
+                            "serviceType": "Locação corporativa e sob demanda"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Intermediação e consignação",
+                            "serviceType": "Agenciamento e intermediação de veículos"
+                        }
+                    }
+                ]
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -46,9 +139,9 @@
                 <svg class="brand-mark__icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                     <defs>
                         <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#e0a3ff" />
-                            <stop offset="50%" style="stop-color:#ff69b4" />
-                            <stop offset="100%" style="stop-color:#9370db" />
+                            <stop offset="0%" style="stop-color:#050f75" />
+                            <stop offset="50%" style="stop-color:#ffd901" />
+                            <stop offset="100%" style="stop-color:#395bb2" />
                         </linearGradient>
                     </defs>
                     <circle cx="50" cy="30" r="8" fill="url(#logoGradient)" opacity="0.8">
@@ -95,10 +188,10 @@
     </header>
 
     <!-- Section 1: Hero -->
-    <section class="hero-section" id="inicio">
+    <section class="hero-section" id="inicio" aria-labelledby="hero-title">
         <div class="hero-section__content">
             <div class="hero-section__eyebrow">Compre, Venda ou Alugue</div>
-            <h1>Aqui você tem flexibilidade</h1>
+            <h1 id="hero-title">Aqui você tem flexibilidade</h1>
 
             <div class="hero-section__description">
                 <p>Encontre o carro ideal para você com nosso suporte especializado em compra, venda e aluguel de
@@ -131,9 +224,13 @@
     </section>
 
     <!-- Section 2: Services Grid -->
-    <section class="services-section" id="solucoes">
+    <section class="services-section" id="solucoes" aria-labelledby="services-title">
         <div class="services-section__container">
-            <h2 class="section-heading">O QUE A <b class="gradient-color">MOBCAR</b> PODE FAZER POR VOCÊ?</h2>
+            <header class="section-heading">
+                <p class="section-heading__eyebrow">Soluções completas</p>
+                <h2 id="services-title" class="section-heading__title">O que a <span class="gradient-color">Mobcar</span> pode fazer por você?</h2>
+                <p class="section-heading__subtitle">Compra, venda e aluguel com assessoria financeira e suporte personalizado em todas as etapas.</p>
+            </header>
             <div class="service-grid">
                 <div class="service-row">
                     <div class="service-card u-glass-panel">
@@ -167,8 +264,12 @@
     </section>
 
     <!-- Section 3: Lead Capture -->
-    <section class="lead-capture" id="lead">
-        <h2 class="section-heading">RETOME O CONTROLE FINANCEIRO</h2>
+    <section class="lead-capture" id="lead" aria-labelledby="lead-title">
+        <header class="section-heading">
+            <p class="section-heading__eyebrow">Simule o atendimento</p>
+            <h2 id="lead-title" class="section-heading__title">Retome o controle financeiro</h2>
+            <p class="section-heading__subtitle">Selecione o objetivo principal e deixamos uma mensagem pronta para agilizar o contato pelo WhatsApp.</p>
+        </header>
         <div class="lead-capture__container">
             <div class="lead-capture__card u-glass-panel">
                 <form id="leadForm" class="lead-form">
@@ -274,8 +375,10 @@
     <section class="whatsapp-cta" id="contato" aria-labelledby="cta-title">
         <div class="whatsapp-cta__container">
             <div class="u-glass-panel whatsapp-cta__card">
-                <p class="whatsapp-cta__eyebrow">Atendimento humano, resposta imediata</p>
-                <h2 id="cta-title">Vamos acelerar sua negociação?</h2>
+                <header class="section-heading section-heading--compact">
+                    <p class="section-heading__eyebrow whatsapp-cta__eyebrow">Atendimento humano, resposta imediata</p>
+                    <h2 id="cta-title" class="section-heading__title whatsapp-cta__title">Vamos acelerar sua negociação?</h2>
+                </header>
                 <p class="whatsapp-cta__copy">Fale agora mesmo pelo WhatsApp e descubra como podemos ajudar na compra, venda ou aluguel do seu veículo.</p>
                 <a class="action-button" target="_blank" rel="noopener" href="https://api.whatsapp.com/send?phone=554896968661&amp;text=ol%C3%A1%2C%20eu%20vim%20do%20site!">Quero falar no WhatsApp</a>
             </div>
@@ -289,10 +392,10 @@
                 <a href="#">Compra</a>
                 <a href="#">Venda</a>
                 <a href="#">Aluguel</a>
-                <a href="#">Sobre</a>
+                <a href="#" class="site-modal-trigger" data-modal="about-modal">Sobre</a>
 
                 <!-- Aqui poderia ter um modal que abre e exibe informações do CNPJ -->
-                <a href="#">Aviso Legal</a>
+                <a href="#" class="site-modal-trigger" data-modal="legal-modal">Aviso Legal</a>
                 <!--  -->
 
             </div>
@@ -307,6 +410,59 @@
             </div>
         </div>
     </footer>
+    <div class="site-modal" id="legal-modal" aria-hidden="true" hidden>
+        <div class="site-modal__backdrop"></div>
+        <div class="site-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="legal-modal-title">
+            <button class="site-modal__close" type="button" aria-label="Fechar aviso legal">&times;</button>
+            <div class="site-modal__content">
+                <p class="site-modal__eyebrow">Documento institucional</p>
+                <h2 id="legal-modal-title" class="site-modal__title">Aviso Legal e Política de Uso</h2>
+                <p>A MOBCAR e suas controladoras disponibilizam este site com o objetivo de apresentar serviços de compra, venda e aluguel de veículos com assessoria financeira. O uso da plataforma implica a aceitação integral dos termos abaixo, que podem ser atualizados sem aviso prévio.</p>
+                <div class="site-modal__section">
+                    <h3>1. Direitos autorais e marcas</h3>
+                    <p>Todo o conteúdo deste site (textos, imagens, ícones, vídeos, identidade visual, códigos e conceitos) é de titularidade exclusiva da MOBCAR ou licenciado pelos respectivos proprietários. É proibida a reprodução, distribuição ou engenharia reversa sem autorização formal. Qualquer infração poderá resultar em medidas civis e criminais cabíveis.</p>
+                </div>
+                <div class="site-modal__section">
+                    <h3>2. Informações e responsabilidade</h3>
+                    <p>As informações disponibilizadas têm caráter meramente informativo e podem sofrer alterações conforme disponibilidade comercial, políticas de crédito ou regulamentações vigentes. A MOBCAR não se responsabiliza por decisões tomadas com base em dados aqui apresentados sem a devida validação direta com nossa equipe.</p>
+                </div>
+                <div class="site-modal__section">
+                    <h3>3. Privacidade e segurança</h3>
+                    <p>Os dados enviados por formulários são utilizados exclusivamente para contato e elaboração de propostas. Utilizamos camadas de segurança para proteger as informações recebidas, porém recomenda-se que o usuário evite compartilhar dados sensíveis em redes públicas ou dispositivos não confiáveis.</p>
+                </div>
+                <div class="site-modal__section">
+                    <h3>4. Contatos oficiais</h3>
+                    <p>Atendimentos oficiais ocorrem pelos canais descritos neste site. Mensagens que pareçam ser da MOBCAR mas não utilizem os contatos divulgados devem ser desconsideradas e reportadas imediatamente.</p>
+                </div>
+                <p class="site-modal__footer">Última atualização: novembro de 2025 • Em caso de dúvidas contate suporte@mobcar.com.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="site-modal" id="about-modal" aria-hidden="true" hidden>
+        <div class="site-modal__backdrop"></div>
+        <div class="site-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="about-modal-title">
+            <button class="site-modal__close" type="button" aria-label="Fechar apresentação institucional">&times;</button>
+            <div class="site-modal__content">
+                <p class="site-modal__eyebrow">Quem somos</p>
+                <h2 id="about-modal-title" class="site-modal__title">Mobcar & Assessoria Facilita</h2>
+                <p>A Mobcar surgiu como extensão natural do grupo Assessoria Facilita, referência nacional em negociação de dívidas bancárias com foco em veículos. Depois de acompanhar milhares de famílias pressionadas por financiamentos abusivos, estruturamos uma operação automotiva capaz de dar continuidade ao cuidado iniciado no jurídico.</p>
+                <div class="site-modal__section">
+                    <h3>Origem financeira</h3>
+                    <p>A Assessoria Facilita atua há anos olhando para cada contrato de financiamento, questionando juros irregulares e negociando diretamente com os bancos para obter descontos expressivos e parcelamentos sustentáveis. Toda a metodologia, tecnologia e governança utilizada nessas negociações é compartilhada integralmente com a Mobcar.</p>
+                </div>
+                <div class="site-modal__section">
+                    <h3>Expansão para o mercado automotivo</h3>
+                    <p>Identificamos que muitos clientes, mesmo após a negociação financeira, precisavam vender, trocar ou regularizar veículos com restrições. A Mobcar foi criada para assumir esse ciclo: compramos, vendemos e locamos veículos financiados ou com pendências, assumindo a burocracia, garantindo liquidez e preservando o patrimônio do cliente.</p>
+                </div>
+                <div class="site-modal__section">
+                    <h3>Jornada integrada</h3>
+                    <p>Operamos com o mesmo time executivo, consultores e plataforma de dados. O cliente mantém um único ponto de contato, que conduz tanto as tratativas jurídicas quanto o plano automotivo subsequente. O resultado é uma experiência contínua, transparente e orientada a soluções reais.</p>
+                </div>
+                <p class="site-modal__footer">Facilita e Mobcar unem expertise jurídica e inteligência de mercado para proteger o patrimônio automotivo de quem precisa de agilidade, discrição e resultado.</p>
+            </div>
+        </div>
+    </div>
     <script src="scripts.js"></script>
 </body>
 
