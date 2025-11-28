@@ -55,6 +55,6 @@ Não tem. Se for copiar, faça algo de decente. Se for copiar, copia direito.
 
 ## Author
 
-Eu, Andre Riffen
+Eu, [Andre Riffen](https://andreriffen.github.io/resume)
 
 > With great powers, comes great reponsability. 🕸️
